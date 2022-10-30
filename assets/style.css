@@ -1,0 +1,169 @@
+@import url('https://font.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(#a2d5ac,#e5eec1);
+}
+nav {
+    height: 80px;
+    background-color: darkkhaki;
+    box-shadow: #f7e5d0 0 0 6px 0;
+}
+h1 {
+    line-height: 80px;
+    display: inline-block;
+    margin-left: 40px;
+    color: #0ab68b;
+}
+nav h1 span {
+    color: red;
+    font-size: 28px;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+ul li a {
+    text-decoration: none;
+    font-weight: lighter;
+    color: beige;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+ul li a:hover {
+    background-color: #a2d5ac;
+    color: aliceblue;
+
+}
+label #button,
+label #close {
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+#page_1 {
+    display: block;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#page_1 h2 {   
+    padding-bottom: 20px;
+}
+#page_1 p {
+    text-align: justify;
+    font-size: 18px;
+}
+#biodata {
+    display: inline-block;
+    position: relative;
+    bottom: 33px;
+    font-size: 28px;
+    margin: auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+#biodata thead tr th {
+    padding: 10px;
+}
+#biodata tbody tr td {
+    padding: 10px;
+}
+aside img {
+    display: inline-block;
+    margin: 0 100px;
+    width: 280px;
+    height: 400px;
+}
+footer {
+    margin-top: 29px;
+    background-color: darkkhaki;
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: black;
+
+}
+
+@media (max-width: 922px) {
+
+    label #button {
+        display: block;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        margin-left: 0;
+        left: 100%;
+        top: 80px;
+        background-color: antiquewhite;
+        text-align: center;
+        transition: .5s;
+    }
+
+    ul li {
+        display: block;
+        line-height: 10px;
+        margin: 50px 0;
+    }
+
+    ul li a {
+        color: black;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    #check:checked ~ label #button {
+        display: none;
+    }
+
+    #check:checked ~ label #close {
+        display: block;
+    }
+}
+@media (max-width: 1200px){
+    aside img {
+        display: block;
+        margin: auto;
+    }
+    #biodata {
+        position: relative;
+        bottom: 0;
+        display: block;
+        margin: auto;
+        margin: 20px;
+        font-size: 16px;
+    }
+    #page_1 p {
+        font-size: 16px;
+    }
+}
